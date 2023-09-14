@@ -36,6 +36,11 @@ Route::get('/pizzas', function () {
     // return ["name"=>"pizzas", "store"=>"KFC"];
 });
 
+Route::get('/pizzas/{id}', function ($id) {
+    //use the $id variable to query the db for a record
+    return view('details',['id'=>$id]);
+});
+
 Route::get('home', [PageController::class, 'index']);
 
 Auth::routes();
