@@ -19,10 +19,13 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzas', function () {
-    return view('pizzas');
+    //get data from db   
+    $pizza = ["type" => "hawaiian", "base" => "cheesy crust"];
+    return view('pizzas', $pizza);
+    // return ["name"=>"pizzas", "store"=>"KFC"];
 });
 
-Route::get('home',[PageController::class,'index']);
+Route::get('home', [PageController::class, 'index']);
 
 Auth::routes();
 
