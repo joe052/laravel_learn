@@ -39,16 +39,9 @@
                                 <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Pizzas</a></div>
                             </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    {{$type}} - {{$base}} - {{$price}}
-
-                                    @if($price > 15)
-                                        <p>this pizza is expensive!</p>
-                                    @endif
-                                </div>
-                                @for($i = 0; $i < 5; $i++)
-                                <p>{{$i}}</p>
+                            <div class="ml-12">   
+                                @for($i = 0;$i < count($pizzas); $i++)
+                                 <p>{{ $pizzas[$i]['type']}} - {{ $pizzas[$i]['base']}} - {{ $pizzas[$i]['price']}}</p>
                                 @endfor
                             </div>
                         </div>
