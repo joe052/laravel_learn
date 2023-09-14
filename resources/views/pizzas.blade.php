@@ -42,7 +42,14 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     {{$type}} - {{$base}} - {{$price}}
+
+                                    @if($price > 15)
+                                        <p>this pizza is expensive!</p>
+                                    @endif
                                 </div>
+                                @for($i = 0; $i < 5; $i++)
+                                <p>{{$i}}</p>
+                                @endfor
                             </div>
                         </div>
 
