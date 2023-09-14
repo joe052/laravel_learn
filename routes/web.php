@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/pizzas', function () {
     //get data from db   
-    $pizza = ["type" => "hawaiian", "base" => "cheesy crust"];
+    $pizza = ["type" => "hawaiian", "base" => "cheesy crust", "price" => "200"];
     return view('pizzas', $pizza);
     // return ["name"=>"pizzas", "store"=>"KFC"];
 });
