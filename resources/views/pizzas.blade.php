@@ -24,6 +24,9 @@
                             <p>{{ $pizzas[$i]['type']}} - {{ $pizzas[$i]['base']}} - {{ $pizzas[$i]['price']}}</p>
                         @endfor -->
 
+                        <p>{{ $name }}</p>
+                        <p>{{ $age }}</p>
+
                         @foreach($pizzas as $pizza)
                             <div>{{$pizza['type']}} - {{$pizza['base']}} - {{$pizza['price']}}</div>
                         @endforeach
