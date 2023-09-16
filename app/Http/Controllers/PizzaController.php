@@ -14,13 +14,11 @@ class PizzaController extends Controller
 
         /**get data from db */
         // $pizzas = Pizza::all();
-        $pizzas = Pizza::orderBy('name','asc')->get();
+        $pizzas = Pizza::orderBy('name', 'asc')->get();
         // $pizzas = Pizza::latest()->get();
         // $pizzas = Pizza::where('type', 'hawaiian')->get();
 
-        return view('pizzas.index', [
-            'pizzas' => $pizzas,
-        ]);
+        return view('pizzas.index', ['pizzas' => $pizzas,]);
         // return ['pizzas' => $pizzas];
     }
 
