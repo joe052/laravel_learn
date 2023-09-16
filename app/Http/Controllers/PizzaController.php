@@ -34,4 +34,27 @@ class PizzaController extends Controller
     {
         return view('pizzas.create');
     }
+
+    public function store()
+    {
+        /**access the data */
+        // error_log(request('name'));
+        // error_log(request('type'));
+        // error_log(request('base'));
+
+        /**Instantiate pizza record */
+        $pizza = new Pizza();
+
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->price = request('price');
+
+        error_log($pizza); //log to terminal
+
+        /**Save the pizza to db */
+        $pizza->save();
+
+        return redirect('/')->with('mssg', 'Thanks for your order');
+    }
 }

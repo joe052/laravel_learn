@@ -25,6 +25,8 @@ Route::get('/pizzas/create', [PizzaController::class, 'create']);
 
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 
+Route::post('/pizzas', [PizzaController::class, 'store']);
+
 Route::get('home', [PageController::class, 'index']);
 
 Auth::routes();
