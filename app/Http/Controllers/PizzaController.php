@@ -10,13 +10,16 @@ class PizzaController extends Controller
 {
     public function index()
     {
-        //get data from db   
-        $pizzas = Pizza::all();
+        // $name = request('name');
 
-        $name = request('name');
+        /**get data from db */
+        // $pizzas = Pizza::all();
+        $pizzas = Pizza::orderBy('name','asc')->get();
+        // $pizzas = Pizza::latest()->get();
+        // $pizzas = Pizza::where('type', 'hawaiian')->get();
 
         return view('pizzas', [
-            'pizzas' => $pizzas,            
+            'pizzas' => $pizzas,
         ]);
         // return ["name"=>"pizzas", "store"=>"KFC"];
     }
