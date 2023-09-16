@@ -22,13 +22,11 @@
                     <div class="ml-12">   
                         <!-- @for($i = 0;$i < count($pizzas); $i++)
                             <p>{{ $pizzas[$i]['type']}} - {{ $pizzas[$i]['base']}} - {{ $pizzas[$i]['price']}}</p>
-                        @endfor -->
-
-                        <p>{{ $name }}</p>
-                        <p>{{ $age }}</p>
+                        @endfor -->                       
 
                         @foreach($pizzas as $pizza)
-                            <div>{{$pizza['type']}} - {{$pizza['base']}} - {{$pizza['price']}}</div>
+                            <!-- <div>{{$pizza['type']}} - {{$pizza['base']}} - {{$pizza['price']}}</div> -->
+                            <div>{{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} - {{ $pizza->price }}</div>
                         @endforeach
                     </div>
                 </div>
