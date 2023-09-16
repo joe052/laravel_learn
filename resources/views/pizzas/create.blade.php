@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="wrapper create-pizza">
-    <h1>Create a New Pizza</h1>
-    <form action="" method="">
+    <h1>Order a Pizza</h1>
+    <form action="/pizzas" method="POST">
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
         <label for="type">Choose pizza type:</label>
