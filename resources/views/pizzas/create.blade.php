@@ -23,7 +23,9 @@
         </select>
         <label for="price">Price:</label>
         <input type="text" id="price" name="price">
-        <input type="submit" value="Order">
+        <label>Extra toppings:</label>
+        <input type="checkbox" name="toppings">
+        <input type="submit" value="Order Pizza">
     </form>
 </div>
 @endsection
