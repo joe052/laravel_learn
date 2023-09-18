@@ -49,12 +49,11 @@ class PizzaController extends Controller
         $pizza->type = request('type');
         $pizza->base = request('base');
         $pizza->price = request('price');
+        $pizza->toppings = request('toppings');
 
-        error_log(request('toppings'));
-        error_log($pizza); //log to terminal
-
+     
         /**Save the pizza to db */
-        // $pizza->save();
+        $pizza->save();
 
         return redirect('/')->with('mssg', 'Thanks for your order!');
     }
