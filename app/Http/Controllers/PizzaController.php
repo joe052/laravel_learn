@@ -50,6 +50,7 @@ class PizzaController extends Controller
         $pizza->base = request('base');
         $pizza->price = request('price');
 
+        error_log(request('toppings'));
         error_log($pizza); //log to terminal
 
         /**Save the pizza to db */
