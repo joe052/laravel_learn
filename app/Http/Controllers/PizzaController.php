@@ -51,10 +51,18 @@ class PizzaController extends Controller
         $pizza->price = request('price');
         $pizza->toppings = request('toppings');
 
-     
+
         /**Save the pizza to db */
         $pizza->save();
 
         return redirect('/')->with('mssg', 'Thanks for your order!');
+    }
+
+    public function destroy($id)
+    {
+        $pizza = Pizza::findOrFail($id);
+        $pizza->delete();
+
+        return redirect('/pizzas');
     }
 }
