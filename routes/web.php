@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/**Routes for pizza controller */
 Route::get('/pizzas', [PizzaController::class, 'index']);
 
 Route::get('/pizzas/create', [PizzaController::class, 'create']);
